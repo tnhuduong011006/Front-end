@@ -28,7 +28,7 @@
             };
         },
         methods: {
-            
+
             async getContact(id) {
                 try {
                     this.contact = await ContactService.get(id);
@@ -36,9 +36,9 @@
                     console.log(error);
                     // Chuyển sang trang NotFound đồng thời giữ cho URL không đổi
                     this.$router.push({
-                        name: "notfound",
+                        name: "contactadd",
                         params: {
-                            pathMatch: this.$route.path.split("/").slice(1)
+                            pathMatch: this.$route.path.split("/").slice(2)
                         },
                         query: this.$route.query,
                         hash: this.$route.hash,
